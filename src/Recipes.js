@@ -63,6 +63,8 @@ function Recipes() {
             case "exit-details-form":
                 fetchFromAPI();
                 break;
+            default:
+                break;
         }
         
         setError("");

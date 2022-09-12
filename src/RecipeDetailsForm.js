@@ -9,7 +9,7 @@ import RatingForm from './RatingForm.js';
 
 function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
 
-    const [recipe, setRecipe] = useState(initialRecipe);
+    const [recipe] = useState(initialRecipe);
     const [ingredients, setIngredients] = useState(initialRecipe.ingredients);
     const [showIngredientForm, setShowIngredientForm] = useState(false);
     const [scopedIngredient, setScopedIngredient] = useState({});
@@ -89,6 +89,9 @@ function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
             case "delete-rating":
                 setRatings(ratings.filter(e => e.ratingId !== rating.ratingId));
                 break;
+            default:
+                break;
+
         }
         
         setError("");
